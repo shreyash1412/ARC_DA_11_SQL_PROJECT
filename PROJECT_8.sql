@@ -1,0 +1,11 @@
+SELECT
+    EXTRACT(YEAR FROM CREATED_DATE) AS Year,
+    SUM(Quantity_Sold * Sale_Price) AS TotalRevenue
+FROM
+    SALES_PROJECT
+GROUP BY
+    Year
+ORDER BY
+    Year;
+
+--  THIS WILL CREATE THE TOTAL REVENUE IN EACH YEAR
